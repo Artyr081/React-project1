@@ -1,19 +1,30 @@
-import React from "react";
+import React from 'react';
 
-const TaskFilter = () => {
+const TaskFilter = ({ onClickFilter, filter }) => {
+  TaskFilter.defaultProps = {
+    filter: 'All',
+    onClickFilter: () => {},
+  };
+
+  const buttons = [
+    { name: 'All', label: 'All' },
+    { name: 'Active', label: 'Active' },
+    { name: 'Completed', label: 'Completed' },
+  ];
+
+  const filters = buttons.map(({ name, label }) => {
+    const isActive = filter === name;
+    const clazz = isActive ? 'selected' : '';
     return (
-        <ul class="filters">
-            <li>
-              <button class="selected">All</button>
-            </li>
-            <li>
-              <button>Active</button>
-            </li>
-            <li>
-              <button>Completed</button>
-            </li>
-        </ul>
+      <li key={name}>
+        <button className={clazz} onClick={() => onClickFilter(name)}>
+          {label}
+        </button>
+      </li>
     );
-}
+  });
+
+  return <ul className="filters">{filters}</ul>;
+};
 
 export default TaskFilter;
