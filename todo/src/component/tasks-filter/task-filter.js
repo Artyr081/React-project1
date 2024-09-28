@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskFilter = ({ onClickFilter, filter }) => {
+function TaskFilter({ onClickFilter, filter }) {
   TaskFilter.defaultProps = {
     filter: 'All',
     onClickFilter: () => {},
@@ -17,7 +17,7 @@ const TaskFilter = ({ onClickFilter, filter }) => {
     const clazz = isActive ? 'selected' : '';
     return (
       <li key={name}>
-        <button className={clazz} onClick={() => onClickFilter(name)}>
+        <button className={clazz} onClick={() => onClickFilter(name)} type="button">
           {label}
         </button>
       </li>
@@ -25,6 +25,6 @@ const TaskFilter = ({ onClickFilter, filter }) => {
   });
 
   return <ul className="filters">{filters}</ul>;
-};
+}
 
 export default TaskFilter;

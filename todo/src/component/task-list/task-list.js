@@ -2,7 +2,7 @@ import React from 'react';
 
 import Task from '../task/task';
 
-const TaskList = ({ todo, onDeletedItem, onCheckboxClick }) => {
+function TaskList({ todo, onDeletedItem, onCheckboxClick }) {
   const taskElement = todo.map((item) => {
     const { id, important } = item;
 
@@ -19,6 +19,6 @@ const TaskList = ({ todo, onDeletedItem, onCheckboxClick }) => {
   });
 
   return <ul className="todo-list">{taskElement}</ul>;
-};
+}
 
 export default TaskList;

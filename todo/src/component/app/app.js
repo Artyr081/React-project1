@@ -23,9 +23,11 @@ export default class App extends Component {
   filterItems(items, filter) {
     if (filter === 'All') {
       return items;
-    } else if (filter === 'Active') {
+    }
+    if (filter === 'Active') {
       return items.filter((task) => !task.important);
-    } else if (filter === 'Completed') {
+    }
+    if (filter === 'Completed') {
       return items.filter((task) => task.important);
     }
   }

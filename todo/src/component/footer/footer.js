@@ -2,7 +2,7 @@ import React from 'react';
 
 import TaskFilter from '../tasks-filter/index';
 
-const Footer = ({ onClickFilter, filter, clearcompleted, doneCount }) => {
+function Footer({ onClickFilter, filter, clearcompleted, doneCount }) {
   Footer.defaultProps = {
     doneCount: 0,
     onClickFilter: () => {},
@@ -11,13 +11,15 @@ const Footer = ({ onClickFilter, filter, clearcompleted, doneCount }) => {
 
   return (
     <footer className="footer">
-      <span className="todo-count">{doneCount} items left</span>
+      <span className="todo-count">
+        {doneCount} items left
+      </span>
       <TaskFilter onClickFilter={onClickFilter} filter={filter} />
-      <button className="clear-completed" onClick={clearcompleted}>
+      <button className="clear-completed" onClick={clearcompleted} type="button">
         Clear completed
       </button>
     </footer>
   );
-};
+}
 
 export default Footer;

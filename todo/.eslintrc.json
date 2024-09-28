@@ -7,10 +7,10 @@
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
-      "plugin:prettier/recommended",
       "plugin:import/errors",
       "plugin:import/warnings",
-      "eslint-config-prettier"
+      "eslint-config-prettier",
+      "airbnb"
     ],
     "parserOptions": {
       "ecmaFeatures": {
@@ -24,10 +24,26 @@
     "plugins": ["react", "prettier", "import"],
     "rules": {
       "indent": ["error", 2],
-      "prettier/prettier": "error",
+      //"prettier/prettier": "error",
       "linebreak-style": [0, "unix"],
       "quotes": ["error", "single"],
       "semi": 0,
+      "no-plusplus": "off",
+      "react/state-in-constructor": "off",
+      "class-methods-use-this": "off",
+      "consistent-return": "off",
+      "react/sort-comp": "off",
+      "react/destructuring-assignment": "off",
+      "max-len": ["error", 120],
+      "object-curly-newline": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prefer-stateless-function": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "eol-last": "off",
+      "prettier/prettier": "off",
+      "react/button-has-type": "off",
+      "jsx-a11y/control-has-associated-label": "off",
+      "react/jsx-one-expression-per-line": "off",
       "import/no-named-as-default": 0,
       "import/no-named-as-default-member": 0,
       "import/namespace": 0,
