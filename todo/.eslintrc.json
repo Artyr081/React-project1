@@ -24,7 +24,7 @@
     "plugins": ["react", "prettier", "import"],
     "rules": {
       "indent": ["error", 2],
-      //"prettier/prettier": "error",
+      "prettier/prettier": "error",
       "linebreak-style": [0, "unix"],
       "quotes": ["error", "single"],
       "semi": 0,
@@ -40,7 +40,6 @@
       "react/prefer-stateless-function": "off",
       "jsx-a11y/label-has-associated-control": "off",
       "eol-last": "off",
-      "prettier/prettier": "off",
       "react/button-has-type": "off",
       "jsx-a11y/control-has-associated-label": "off",
       "react/jsx-one-expression-per-line": "off",

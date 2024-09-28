@@ -11,9 +11,7 @@ function Footer({ onClickFilter, filter, clearcompleted, doneCount }) {
 
   return (
     <footer className="footer">
-      <span className="todo-count">
-        {doneCount} items left
-      </span>
+      <span className="todo-count">{doneCount} items left</span>
       <TaskFilter onClickFilter={onClickFilter} filter={filter} />
       <button className="clear-completed" onClick={clearcompleted} type="button">
         Clear completed

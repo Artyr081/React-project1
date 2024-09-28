@@ -11,11 +11,7 @@ export default class Task extends Component {
           <input className="toggle" type="checkbox" onClick={onCheckboxClick} />
           <label>
             <span className="description">{label}</span>
-            <span className="created">
-              created{formatDistanceToNow(date, { includeSeconds: true })}
-              {' '}
-              ago
-            </span>
+            <span className="created">created{formatDistanceToNow(date, { includeSeconds: true })} ago</span>
           </label>
           <button className="icon icon-edit" />
           <button className="icon icon-destroy" onClick={onDeletedItem} />
