@@ -6,11 +6,10 @@
     "ignorePatterns": ["node_modules", "dist", "build"],
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended",
       "plugin:import/errors",
       "plugin:import/warnings",
-      "eslint-config-prettier",
-      "airbnb"
+      "airbnb",
+      "eslint-config-prettier"
     ],
     "parserOptions": {
       "ecmaFeatures": {
