@@ -21,10 +21,10 @@
       "sourceType": "module",
       "parser": "babel-eslint"
     },
-    "plugins": ["react"],
+    "plugins": ["react", "prettier", "import"],
     "rules": {
       "indent": ["error", 2],
-      "prettier/prettier": "error",
+      "prettier/prettier": "off",
       "linebreak-style": [0, "unix"],
       "quotes": ["error", "single"],
       "semi": 0,
